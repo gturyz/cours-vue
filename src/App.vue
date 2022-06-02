@@ -7,15 +7,24 @@ import User from "./components/User.vue";
 </script>
 
 <template>
-  <HelloWorld />
-  <hr />
-  <Compteur />
-  <hr />
-  <FormJWT />
-  <hr />
-  <List />
-  <hr />
-  <User />
+  <div>
+    <router-link
+      class="btn btn-primary"
+      role="button"
+      :to="{ name: 'HelloWorld' }"
+      >HelloWorld</router-link
+    >
+    <router-link class="btn btn-primary" role="button" :to="{ name: 'FormJWT' }"
+      >FormJWT</router-link
+    >
+    <router-link class="btn btn-primary" role="button" :to="{ name: 'User' }"
+      >User</router-link
+    >
+    <router-link class="btn btn-primary" role="button" :to="{ name: 'List' }"
+      >List</router-link
+    >
+  </div>
+  <router-view></router-view>
 </template>
 
 <style>
